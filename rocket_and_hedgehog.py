@@ -70,7 +70,7 @@ class Rocket(Body):
           self.fuel_mass -= self.delta_m
 
 
-р = Body(0, 0, 9, 9)
+b = Body(0, 0, 9, 9)
 r = Rocket(0, 0)
 
 bodies = [b, r]
