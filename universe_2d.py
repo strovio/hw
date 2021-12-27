@@ -1,5 +1,3 @@
-%matplotlib inline
-
 from abc import ABC, abstractmethod
 import numpy as np
 from numpy import array as vec
@@ -13,7 +11,6 @@ COLLISION_COEFFICIENT = 50.0
 MODEL_DELTA_T = 0.01
 TIME_TO_MODEL = 100
 
-# ABC это не алфавит, а AbstractBaseClass. Не даст создать экземпляр, пока не переопределишь все методы-заглушки
 class Universe(ABC):
     """Невнятная вселенная, основа всех миров"""
 
@@ -115,12 +112,6 @@ for stepn in range(steps):
 plt.gca().set_aspect('equal')
 
 for b in bodies:
-    # Вот так понятно
-    # t = b.ptrace
-    # xs = [p[0] for p in t]
-    # ys = [p[1] for p in t]
-    # plt.plot(xs, ys)
-    # А так — лихо. Кто объяснит? =)
     plt.plot(*tuple(map(list, zip(*b.ptrace))))
-
+    
 plt.show();
