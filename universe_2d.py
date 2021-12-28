@@ -114,4 +114,4 @@ plt.gca().set_aspect('equal')
 for b in bodies:
     plt.plot(*tuple(map(list, zip(*b.ptrace))))
     
-plt.show();
+plt.show()
